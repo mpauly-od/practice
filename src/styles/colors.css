@@ -1,0 +1,47 @@
+/* Inspiration drawn from:
+ * https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921f
+ * https://material.io/design/color/the-color-system.html#color-theme-creation
+ */
+
+:root {
+    /* Palette */
+
+    /* Neutral colors generated via chroma.js: 
+     * https://gka.github.io/palettes/#/8|s|111111,ffffff|ffffe0,ff005e,93003a|1|1
+     */
+    --color-black: #111111;
+    --color-gray-1: #2d2d2d;
+    --color-gray-2: #4c4c4c;
+    --color-gray-3: #6c6c6c;
+    --color-gray-4: #8f8f8f;
+    --color-gray-5: #b3b3b3;
+    --color-gray-6: #d8d8d8;
+    --color-white: #ffffff;
+    
+    /* Brand colors */
+    /* Light and dark variations produced by converting to CIELAB color space,
+     * adjusting lightness value 15% higher and lower, and converting back
+     */
+    --color-primary: #e31b2c;
+    --color-primary-light: #fb3b3d;
+    --color-primary-dark: #cb001c;
+
+    /* Less obvious with a dark black. Used 20% here, but may want more. */
+    --color-secondary: #222222;
+    --color-secondary-light: #272727;
+    --color-secondary-dark: #1d1d1d;
+    
+    --color-accent: #009ddb;
+    --color-surface: #ffffff;
+    
+    --color-success: #88c459;
+    --color-error: #f56642;
+
+    --color-focus: #ffdf33;
+
+    /* Typography */
+
+    --color-on-primary: var(--color-white); /* Note: not AAA compliant for small, unbolded text */
+    --color-on-secondary: var(--color-gray-6);
+    --color-on-surface: var(--color-gray-1);
+}
