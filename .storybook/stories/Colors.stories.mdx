@@ -1,207 +1,105 @@
-import { Meta } from '@storybook/addon-docs';
+import { Canvas, ColorPalette, ColorItem, Meta } from '@storybook/addon-docs';
+
+export const computedStyles = getComputedStyle(document.body);
 
 <Meta title="Colors" />
 
-<style>{`
-    .pallete {
-        display: flex;
-    }
-
-    .pallete-color {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        width: 100px;
-        height: 100px;
-        border: 1px solid black;
-    }
-
-
-    /* Brand */
-
-    .color-primary {
-        background: var(--color-primary);
-        color: var(--color-text-on-primary);
-    }
-
-    .color-primary-light {
-        background: var(--color-primary-light);
-        color: var(--color-text-on-primary);
-    }
-
-    .color-primary-dark {
-        background: var(--color-primary-dark);
-        color: var(--color-text-on-primary);
-    }
-
-    .color-secondary {
-        background: var(--color-secondary);
-        color: var(--color-text-on-secondary);
-    }
-
-    .color-secondary-light {
-        background: var(--color-secondary-light);
-        color: var(--color-text-on-secondary);
-    }
-
-    .color-secondary-dark {
-        background: var(--color-secondary-dark);
-        color: var(--color-text-on-secondary);
-    }
-
-    .color-accent {
-        background: var(--color-accent);
-    }
-
-    .color-accent-light {
-        background: var(--color-accent-light);
-    }
-
-    .color-accent-dark {
-        background: var(--color-accent-dark);
-    }
-
-
-    /* Surface */
-
-    .color-surface {
-        background: var(--color-surface);
-        color: var(--color-text-on-surface);
-    }
-
-
-    /* Neutrals */
-
-    .color-black {
-        background: var(--color-black);
-    }
-
-    .color-gray-1 {
-        background: var(--color-gray-1);
-    }
-
-    .color-gray-2 {
-        background: var(--color-gray-2);
-    }
-
-    .color-gray-3 {
-        background: var(--color-gray-3);
-    }
-
-    .color-gray-4 {
-        background: var(--color-gray-4);
-    }
-
-    .color-gray-5 {
-        background: var(--color-gray-5);
-    }
-
-    .color-gray-6 {
-        background: var(--color-gray-6);
-    }
-
-    .color-white {
-        background: var(--color-white);
-    }
-
-
-    /* State */
-
-    .states {
-        display: flex;
-        gap: 20px;
-    }
-
-    .state {
-
-    }
-
-    .color-success {
-        background: var(--color-success);
-    }
-
-    .color-error {
-        background: var(--color-error);
-    }
-
-
-    /* Text */
-
-    .color-text-on-primary {
-        color: var(--color-text-on-primary);
-    }
-
-    .color-text-on-secondary {
-        color: var(--color-text-on-secondary);
-    }
-
-    .color-text-on-surface {
-        color: var(--color-text-on-surface);
-    }
-`}</style>
-
 <h1>Colors</h1>
+<p>Inspired by:</p>
+<ul>
+    <li><a href="https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921f">CodyHouse Framework</a></li>
+    <li><a href="https://material.io/design/color/the-color-system.html#color-theme-creation">Material Design</a></li>
+</ul>
 
 <h2>Brand colors</h2>
+<p>
+    These are colors unique to the branding of the site. The primary color can be used for things such as buttons and selected tabs. The secondary color functions similarly, generally with less prominance. The accent color is for more minor things such as links. 
+</p>
+<p>
+    For each of the brand colors, we generate light and dark variants for things like hover states, clicks, visited links, etc. These variants were produced by converting the hex color to the <a href="https://en.wikipedia.org/wiki/CIELAB_color_space">CIELAB color space</a>, which more closely approximates human vision, adjusting the lightness values by a percentage, and converting back to hex.
+</p>
 
-<h3>Primary</h3>
-<div class="pallete">
-    <div class="pallete-color color-primary-light"></div>
-    <div class="pallete-color color-primary"></div>
-    <div class="pallete-color color-primary-dark"></div>
-</div>
+<ColorPalette>
+    <ColorItem
+        title="Primary"
+        subtitle="15% lightness variations"
+        colors={{
+            "Primary (light)": computedStyles.getPropertyValue('--color-primary-light'),
+            "Primary": computedStyles.getPropertyValue('--color-primary'),
+            "Primary (dark)": computedStyles.getPropertyValue('--color-primary-dark')
+        }}
+    />
+    <ColorItem
+        title="Secondary"
+        subtitle="25% lightness variations for darker tones"
+        colors={{
+            "Secondary (light)": computedStyles.getPropertyValue('--color-secondary-light'),
+            "Secondary": computedStyles.getPropertyValue('--color-secondary'),
+            "Secondary (dark)": computedStyles.getPropertyValue('--color-secondary-dark')
+        }}
+    />
+    <ColorItem
+        title="Accent"
+        subtitle="15% lightness variations"
+        colors={{
+            "Accent (light)": computedStyles.getPropertyValue('--color-accent-light'),
+            "Accent": computedStyles.getPropertyValue('--color-accent'),
+            "Accent (dark)": computedStyles.getPropertyValue('--color-accent-dark')
+        }}
+    />
+</ColorPalette>
 
-<h3>Secondary</h3>
-<div class="pallete">
-    <div class="pallete-color color-secondary-light"></div>
-    <div class="pallete-color color-secondary"></div>
-    <div class="pallete-color color-secondary-dark"></div>
-</div>
+<h2>Neutral colors</h2>
+<p>
+    In addition to the brand-specific colors, we make use of a swatch of neutral colors to fill out the site. This neutral color palette was generated using <a href="https://gka.github.io/palettes/#/8|s|111111,ffffff|ffffe0,ff005e,93003a|1|1">Chroma.js</a>.
+</p>
+<p>
+    Additionally, we include a neutral "surface" color to serve as a background color in cases where we don't want the emphasis of a brand color.
+</p>
+<ColorPalette>
+    <ColorItem
+        title="Neutral"
+        colors={{
+            "Black": computedStyles.getPropertyValue('--color-black'),
+            "Gray 1": computedStyles.getPropertyValue('--color-gray-1'),
+            "Gray 2": computedStyles.getPropertyValue('--color-gray-2'),
+            "Gray 3": computedStyles.getPropertyValue('--color-gray-3'),
+            "Gray 4": computedStyles.getPropertyValue('--color-gray-4'),
+            "Gray 5": computedStyles.getPropertyValue('--color-gray-5'),
+            "Gray 6": computedStyles.getPropertyValue('--color-gray-6'),
+            "White": computedStyles.getPropertyValue('--color-white')
+        }}
+    />
+    <ColorItem
+        title="Surface"
+        colors={{
+            "": computedStyles.getPropertyValue('--color-surface')
+        }}
+    />
+</ColorPalette>
 
-<h3>Accent</h3>
-<div class="pallete">
-    <div class="pallete-color color-accent-light"></div>
-    <div class="pallete-color color-accent"></div>
-    <div class="pallete-color color-accent-dark"></div>
-</div>
 
-<h2>Neutral</h2>
-<div class="pallete">
-    <div class="pallete-color color-black"></div>
-    <div class="pallete-color color-gray-1"></div>
-    <div class="pallete-color color-gray-2"></div>
-    <div class="pallete-color color-gray-3"></div>
-    <div class="pallete-color color-gray-4"></div>
-    <div class="pallete-color color-gray-5"></div>
-    <div class="pallete-color color-gray-6"></div>
-    <div class="pallete-color color-white"></div>
-</div>
-
-<h2>Surface</h2>
-<div class="pallete">
-    <div class="pallete-color color-surface"></div>
-</div>
-
-<h2>State</h2>
-<div class="states">
-    <div>
-        <h3>Success</h3>
-        <div class="pallete-color color-success"></div>
-    </div>
-    <div>
-        <h3>Error</h3>
-        <div class="pallete-color color-error"></div>
-    </div>
-    <div>
-        <h3>Focused</h3>
-        <div class="pallete-color focused"></div>
-    </div>
-</div>
-
-<h2>Text</h2>
-<div class="pallete">
-    <div class="pallete-color color-primary">Text</div>
-    <div class="pallete-color color-secondary">Text</div>
-    <div class="pallete-color color-surface">Text</div>
-</div>
+<h2>State colors</h2>
+<p>
+    These are colors used to represent state throughout the site.
+</p>
+<ColorPalette>
+    <ColorItem
+        title="Success"
+        colors={{
+            "": computedStyles.getPropertyValue('--color-success')
+        }}
+    />
+    <ColorItem
+        title="Error"
+        colors={{
+            "": computedStyles.getPropertyValue('--color-error')
+        }}
+    />
+    <ColorItem
+        title="Focus"
+        colors={{
+            "": computedStyles.getPropertyValue('--color-focus')
+        }}
+    />
+</ColorPalette>
