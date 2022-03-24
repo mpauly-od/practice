@@ -1,0 +1,207 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Colors" />
+
+<style>{`
+    .pallete {
+        display: flex;
+    }
+
+    .pallete-color {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
+
+    /* Brand */
+
+    .color-primary {
+        background: var(--color-primary);
+        color: var(--color-text-on-primary);
+    }
+
+    .color-primary-light {
+        background: var(--color-primary-light);
+        color: var(--color-text-on-primary);
+    }
+
+    .color-primary-dark {
+        background: var(--color-primary-dark);
+        color: var(--color-text-on-primary);
+    }
+
+    .color-secondary {
+        background: var(--color-secondary);
+        color: var(--color-text-on-secondary);
+    }
+
+    .color-secondary-light {
+        background: var(--color-secondary-light);
+        color: var(--color-text-on-secondary);
+    }
+
+    .color-secondary-dark {
+        background: var(--color-secondary-dark);
+        color: var(--color-text-on-secondary);
+    }
+
+    .color-accent {
+        background: var(--color-accent);
+    }
+
+    .color-accent-light {
+        background: var(--color-accent-light);
+    }
+
+    .color-accent-dark {
+        background: var(--color-accent-dark);
+    }
+
+
+    /* Surface */
+
+    .color-surface {
+        background: var(--color-surface);
+        color: var(--color-text-on-surface);
+    }
+
+
+    /* Neutrals */
+
+    .color-black {
+        background: var(--color-black);
+    }
+
+    .color-gray-1 {
+        background: var(--color-gray-1);
+    }
+
+    .color-gray-2 {
+        background: var(--color-gray-2);
+    }
+
+    .color-gray-3 {
+        background: var(--color-gray-3);
+    }
+
+    .color-gray-4 {
+        background: var(--color-gray-4);
+    }
+
+    .color-gray-5 {
+        background: var(--color-gray-5);
+    }
+
+    .color-gray-6 {
+        background: var(--color-gray-6);
+    }
+
+    .color-white {
+        background: var(--color-white);
+    }
+
+
+    /* State */
+
+    .states {
+        display: flex;
+        gap: 20px;
+    }
+
+    .state {
+
+    }
+
+    .color-success {
+        background: var(--color-success);
+    }
+
+    .color-error {
+        background: var(--color-error);
+    }
+
+
+    /* Text */
+
+    .color-text-on-primary {
+        color: var(--color-text-on-primary);
+    }
+
+    .color-text-on-secondary {
+        color: var(--color-text-on-secondary);
+    }
+
+    .color-text-on-surface {
+        color: var(--color-text-on-surface);
+    }
+`}</style>
+
+<h1>Colors</h1>
+
+<h2>Brand colors</h2>
+
+<h3>Primary</h3>
+<div class="pallete">
+    <div class="pallete-color color-primary-light"></div>
+    <div class="pallete-color color-primary"></div>
+    <div class="pallete-color color-primary-dark"></div>
+</div>
+
+<h3>Secondary</h3>
+<div class="pallete">
+    <div class="pallete-color color-secondary-light"></div>
+    <div class="pallete-color color-secondary"></div>
+    <div class="pallete-color color-secondary-dark"></div>
+</div>
+
+<h3>Accent</h3>
+<div class="pallete">
+    <div class="pallete-color color-accent-light"></div>
+    <div class="pallete-color color-accent"></div>
+    <div class="pallete-color color-accent-dark"></div>
+</div>
+
+<h2>Neutral</h2>
+<div class="pallete">
+    <div class="pallete-color color-black"></div>
+    <div class="pallete-color color-gray-1"></div>
+    <div class="pallete-color color-gray-2"></div>
+    <div class="pallete-color color-gray-3"></div>
+    <div class="pallete-color color-gray-4"></div>
+    <div class="pallete-color color-gray-5"></div>
+    <div class="pallete-color color-gray-6"></div>
+    <div class="pallete-color color-white"></div>
+</div>
+
+<h2>Surface</h2>
+<div class="pallete">
+    <div class="pallete-color color-surface"></div>
+</div>
+
+<h2>State</h2>
+<div class="states">
+    <div>
+        <h3>Success</h3>
+        <div class="pallete-color color-success"></div>
+    </div>
+    <div>
+        <h3>Error</h3>
+        <div class="pallete-color color-error"></div>
+    </div>
+    <div>
+        <h3>Focused</h3>
+        <div class="pallete-color focused"></div>
+    </div>
+</div>
+
+<h2>Text</h2>
+<div class="pallete">
+    <div class="pallete-color color-primary">Text</div>
+    <div class="pallete-color color-secondary">Text</div>
+    <div class="pallete-color color-surface">Text</div>
+</div>
