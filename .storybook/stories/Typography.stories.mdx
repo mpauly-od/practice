@@ -1,0 +1,107 @@
+import { Meta, Preview } from '@storybook/addon-docs';
+
+<style>{`
+  .display-table {
+    text-align: start;
+    border-collapse: collapse;
+  }
+
+  .display-table th {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .display-table td {
+    font-weight: var(--font-weight-normal);
+  }
+
+  .display-table td, .display-table th {
+    padding: 10px;
+    border: 1px solid black;
+  }
+`}</style>
+
+<Meta title="Design fundamentals/Typography" />
+
+<h1>Typography</h1>
+
+<h2>Sizing</h2>
+<Preview>
+  <table class="display-table">
+    <tr>
+      <th>Size</th>
+      <th>CSS property</th>
+      <th>Utility class</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>Extra small</td>
+      <td>--text-xs</td>
+      <td>.text-xs</td>
+      <td class="text-xs">Lorem ipsum dolor sit amet</td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>--text-sm</td>
+      <td>.text-sm</td>
+      <td class="text-sm">Lorem ipsum dolor sit amet</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td>--text-md</td>
+      <td>.text-md</td>
+      <td class="text-md">Lorem ipsum dolor sit amet</td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td>--text-lg</td>
+      <td>.text-lg</td>
+      <td class="text-lg">Lorem ipsum dolor sit amet</td>
+    </tr>
+    <tr>
+      <td>Extra Large</td>
+      <td>--text-xl</td>
+      <td>.text-xl</td>
+      <td class="text-xl">Lorem ipsum dolor sit amet</td>
+    </tr>
+    <tr>
+      <td>Extra extra large</td>
+      <td>--text-xxl</td>
+      <td>.text-xxl</td>
+      <td class="text-xxl">Lorem ipsum dolor sit amet</td>
+    </tr>
+  </table>
+</Preview>
+
+<h2>Headings</h2>
+<Preview>
+  <table class="display-table">
+    <tr>
+      <th>Heading</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>h1</td>
+      <td><h1>Some example heading text</h1></td>
+    </tr>
+    <tr>
+      <td>h2</td>
+      <td><h2>Some example heading text</h2></td>
+    </tr>
+    <tr>
+      <td>h3</td>
+      <td><h3>Some example heading text</h3></td>
+    </tr>
+    <tr>
+      <td>h4</td>
+      <td><h4>Some example heading text</h4></td>
+    </tr>
+    <tr>
+      <td>h5</td>
+      <td><h5>Some example heading text</h5></td>
+    </tr>
+    <tr>
+      <td>h6</td>
+      <td><h6>Some example heading text</h6></td>
+    </tr>
+  </table>
+</Preview>
