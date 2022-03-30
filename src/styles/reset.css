@@ -1,0 +1,61 @@
+/* Taken from a combination of CSS resets:
+ * https://github.com/CodyHouse/codyhouse-framework/blob/master/main/assets/css/base/_reset.scss
+ * https://piccalil.li/blog/a-modern-css-reset/
+ */
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+* {
+    font: inherit;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main, form legend {
+    display: block;
+}
+
+/* Setting "list-style: none" will remove semantics for some screen readers: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style.
+ * Only remove the list styling where the semantics have been added back using "role='list'"
+ */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Cuts down animations, transitions, and scrolling for users that want reduced motion.
+ * Setting very small values for animation and transition duration rather than removing them to allow JS events to fire still.
+ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
