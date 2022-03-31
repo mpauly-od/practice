@@ -11,7 +11,11 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client", "node"],
-    "baseUrl": "./"
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "react": ["./stub/types__react"]
+    }
   },
   "include": [
     "src/**/*.ts",
