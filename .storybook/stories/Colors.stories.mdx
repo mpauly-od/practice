@@ -2,6 +2,37 @@ import { Canvas, ColorPalette, ColorItem, Meta } from '@storybook/addon-docs';
 
 export const computedStyles = getComputedStyle(document.body);
 
+<style>{`
+    .text-demo {
+        display: flex;
+        gap: 20px;
+    }
+
+    .text-display {
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0px 1px 6px 0px var(--color-black);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .text-display-primary {
+        background: var(--color-primary);
+        color: var(--color-text-on-primary);
+    }
+
+    .text-display-secondary {
+        background: var(--color-secondary);
+        color: var(--color-text-on-secondary);
+    }
+
+    .text-display-surface {
+        background: var(--color-surface);
+        color: var(--color-text-on-surface);
+    }
+`}</style>
+
 <Meta title="Design fundamentals/Colors" />
 
 <h1>Colors</h1>
@@ -103,3 +134,20 @@ export const computedStyles = getComputedStyle(document.body);
         }}
     />
 </ColorPalette>
+
+<h2>Text colors</h2>
+<p>
+    Text colors are selected based on the background they appear on so that the text gets appropriate contrast. Backgrounds are typically the primary or secondary brand color or the surface color.
+</p>
+
+<div class="text-demo">
+    <div class="text-display text-display-primary">
+        Text on primary
+    </div>
+    <div class="text-display text-display-secondary">
+        Text on secondary
+    </div>
+    <div class="text-display text-display-surface">
+        Text on surface
+    </div>
+</div>
