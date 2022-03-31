@@ -15,7 +15,8 @@
     "rootDir": ".",
     "paths": {
       "react": ["./stub/types__react"]
-    }
+    },
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
