@@ -1,0 +1,14 @@
+<template>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+        <g>
+	        <path d="M1,20c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l18-18c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-18,18 C1.5,19.9,1.3,20,1,20z" />
+        </g>
+        <g>
+	        <path d="M19,20c-0.3,0-0.5-0.1-0.7-0.3l-18-18c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l18,18c0.4,0.4,0.4,1,0,1.4 C19.5,19.9,19.3,20,19,20z"/>
+        </g>
+    </svg>
+</template>
+
+<script setup lang="ts">
+
+</script>
