@@ -1,28 +1,36 @@
 <template>
-    <button :class="`button ${type}`">
-        <slot></slot>
+    <button
+        :class="`${$style.button} ${$style[styleType]}`"
+    >
+        {{ label }}
     </button>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-
-type ButtonType = 'primary' | 'secondary' | 'default';
+import { ButtonType } from './ButtonType'
 
 export default defineComponent({
     props: {
-      type: {
+      styleType: {
           type: String as PropType<ButtonType>,
-          default: 'default'
+          default: 'surface'
+      },
+      label: {
+          type: String,
+          default: 'Click'
       }
     },
     setup () {
         return {}
-    }
+    },
+    emits: [
+        'click'
+    ]
 })
 </script>
 
-<style scoped>
+<style module>
     .button {
         border: none;
         border-radius: var(--border-radius);
@@ -40,7 +48,7 @@ export default defineComponent({
         color: var(--color-text-on-secondary);
     }
 
-    .default {
+    .surface {
         background: var(--color-surface);
         border: 1px solid var(--color-text-on-surface);
         color: var(--color-text-on-surface);

@@ -1,31 +1,38 @@
 import { Story } from '@storybook/vue3';
-import Button from '../../../src/components/base/Button.vue';
+import { buttonTypes } from '../../../src/components/base/Button/ButtonType';
+import Button from '../../../src/components/base/Button/Button.vue';
 
 export default {
     title: 'Base/Button',
-    component: Button
+    component: Button,
+    argTypes: {
+        styleType: {
+            options: buttonTypes,
+            control: { type: 'select' }
+        }
+    }
 };
 
 const Template: Story = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { Button },
     setup: () => {
-        return { args}
+        return { args };
     },
-    template: '<Button v-bind="args">Click me</Button>'
+    template: '<Button v-bind="args"/>'
 });
-
-export const Default = Template.bind({});
-Default.args = {
-    type: 'default'
-};
 
 export const Primary = Template.bind({});
 Primary.args = {
-    type: 'primary'
+    styleType: 'primary'
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-    type: 'secondary'
+    styleType: 'secondary'
+};
+
+export const Surface = Template.bind({});
+Surface.args = {
+    styleType: 'surface'
 };
