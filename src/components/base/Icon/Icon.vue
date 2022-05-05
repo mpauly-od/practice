@@ -19,8 +19,6 @@ const components = iconNames.reduce((obj, iconName) => {
     return obj;
 }, {} as { [n in IconComponentName]: typeof defineAsyncComponent });
 
-// const Icon_dismiss = defineAsyncComponent(() => import('./Icon_dismiss.vue'));
-
 export default defineComponent({
     components,
     props: {
@@ -30,7 +28,7 @@ export default defineComponent({
         }
     },
     setup (props) {
-        const iconComponent = computed(() => `Icon_${props.name}`);
+        const iconComponent = computed<IconComponentName>(() => `Icon_${props.name}`);
 
         return { 
             iconComponent
@@ -41,9 +39,9 @@ export default defineComponent({
 
 <style module>
 .icon {
-    height: var(--text-lg);
-    width: var(--text-lg);
-    
+    height: var(--text-xl);
+    width: var(--text-xl);
+
     fill: currentColor;
     stroke: currentColor;
 }
