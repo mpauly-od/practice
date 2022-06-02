@@ -68,9 +68,6 @@ export default defineComponent({
             default: undefined
         }
     },
-    emits: [
-        "click"
-    ],
     setup: () => {
         return {};
     }
