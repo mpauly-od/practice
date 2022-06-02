@@ -1,5 +1,5 @@
 <template>
-    <svg :class="$style.icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
         <defs>
             <clipPath id="clip-Delete_1">
                 <rect width="18" height="18"/>
@@ -18,10 +18,3 @@
 <script setup lang="ts">
 
 </script>
-
-<style module>
-.icon {
-    fill: currentColor;
-    stroke: none;
-}
-</style>

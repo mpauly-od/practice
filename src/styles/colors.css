@@ -26,17 +26,18 @@
     --color-primary-light: #fb3b3d;
     --color-primary-dark: #cb001c;
 
-    /* Less obvious with a dark black. Used 25% here, but may want more. */
+    /* Less obvious with a dark black. Used 35% here. */
     --color-secondary: #222222;
-    --color-secondary-light: #292929;
-    --color-secondary-dark: #1b1b1b;
+    --color-secondary-light: #2C2C2C;
+    --color-secondary-dark: #191919;
     
     --color-accent: #009ddb;
     --color-accent-light: #3db5f5;
     --color-accent-dark: #0085c2;
 
 
-    --color-surface: #ffffff;
+    --color-surface: var(--color-white);
+    --color-surface-hover: var(--color-gray-6); /* We don't necessarily need a full dark variation here for broad use, but a hover color is useful utility */
     
     --color-success: #88c459;
     --color-error: #f56642;

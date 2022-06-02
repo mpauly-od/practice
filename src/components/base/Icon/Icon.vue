@@ -43,6 +43,5 @@ export default defineComponent({
     width: var(--text-xl);
 
     fill: currentColor;
-    stroke: currentColor;
 }
 </style>

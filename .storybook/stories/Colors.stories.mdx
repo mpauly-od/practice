@@ -62,7 +62,7 @@ export const computedStyles = getComputedStyle(document.body);
     />
     <ColorItem
         title="Secondary"
-        subtitle="25% lightness variations for darker tones"
+        subtitle="35% lightness variations for darker tones"
         colors={{
             "Secondary (light)": computedStyles.getPropertyValue('--color-secondary-light'),
             "Secondary": computedStyles.getPropertyValue('--color-secondary'),
@@ -85,7 +85,7 @@ export const computedStyles = getComputedStyle(document.body);
     In addition to the brand-specific colors, we make use of a swatch of neutral colors to fill out the site. This neutral color palette was generated using <a href="https://gka.github.io/palettes/#/8|s|111111,ffffff|ffffe0,ff005e,93003a|1|1">Chroma.js</a>.
 </p>
 <p>
-    Additionally, we include a neutral "surface" color to serve as a background color in cases where we don't want the emphasis of a brand color.
+    Additionally, we include a neutral "surface" color to serve as a background color in cases where we don't want the emphasis of a brand color. The surface color doesn't get the full light/dark variation treatment, but we provide another neutral tone as a hover color for utility.
 </p>
 <ColorPalette>
     <ColorItem
@@ -104,7 +104,8 @@ export const computedStyles = getComputedStyle(document.body);
     <ColorItem
         title="Surface"
         colors={{
-            "": computedStyles.getPropertyValue('--color-surface')
+            "Base": computedStyles.getPropertyValue('--color-surface'),
+            "Hover": computedStyles.getPropertyValue('--color-surface-hover')
         }}
     />
 </ColorPalette>
