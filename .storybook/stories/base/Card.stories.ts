@@ -1,16 +1,16 @@
 import { Story } from '@storybook/vue3';
 import { ref } from 'vue';
-import Card from '../../../src/components/base/Card/Card.vue';
+import CardComponent from '../../../src/components/base/Card/Card.vue';
 
 export default {
     title: 'Base/Card',
-    component: Card
+    component: CardComponent
 };
 
 const Template: Story = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { 
-        Card
+        CardComponent
     },
     setup: () => {
         const count = ref(0);
@@ -21,19 +21,19 @@ const Template: Story = (args, { argTypes }) => ({
         };
     },
     template: `
-        <Card 
+        <CardComponent 
             v-bind="args"
             style="height: 300px; width: 200px; display: flex; align-items: center; justify-content: center;"
             @click="count++"
         >
             <span>Card</span>
-        </Card>
+        </CardComponent>
         <div>Times clicked: {{ count }}</div>
     `
 });
 
-export const Demo = Template.bind({});
-Demo.args = {
+export const Card = Template.bind({});
+Card.args = {
     clickOptions: {
         ariaLabel: 'You can click this card'
     }

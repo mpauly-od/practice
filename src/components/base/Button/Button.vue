@@ -52,20 +52,20 @@ export default defineComponent({
             default: false
         },
         /**
-         * Removes the label from the button.
-         * @requires @param iconName
-         * @requires aria-label attribute for accessibility purposes 
-         */
-        iconOnly: {
-            type: Boolean,
-            default: false
-        },
-        /**
          * Name of the icon to display inside the button
          */
         iconName: {
             type: String as PropType<IconName>,
             default: undefined
+        },
+        /**
+         * Removes the label from the button. Only works if an iconName is provided.
+         * 
+         * Buttons without text should include an aria-label attribute for accessibility purposes.
+         */
+        iconOnly: {
+            type: Boolean,
+            default: false
         }
     },
     setup: () => {

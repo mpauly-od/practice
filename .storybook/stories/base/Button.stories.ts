@@ -1,11 +1,11 @@
 import { Story } from '@storybook/vue3';
 import { buttonTypes } from '../../../src/components/base/Button/ButtonType';
-import Button from '../../../src/components/base/Button/Button.vue';
+import ButtonComponent from '../../../src/components/base/Button/Button.vue';
 import { iconNames } from '../../../src/components/base/Icon/IconName';
 
 export default {
     title: 'Base/Button',
-    component: Button,
+    component: ButtonComponent,
     args: {
         label: "Click"
     },
@@ -23,12 +23,12 @@ export default {
 
 const Template: Story = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
-    components: { Button },
+    components: { ButtonComponent },
     setup: () => {
         return { args };
     },
-    template: '<Button v-bind="args"/>'
+    template: '<ButtonComponent v-bind="args"/>'
 });
 
-export const Demo = Template.bind({});
-Demo.args = {};
+export const Button = Template.bind({});
+Button.args = {};

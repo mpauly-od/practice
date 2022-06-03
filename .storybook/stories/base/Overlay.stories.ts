@@ -1,18 +1,18 @@
 import { Story } from '@storybook/vue3';
 import { ref } from 'vue';
 import Button from '../../../src/components/base/Button/Button.vue';
-import Overlay from '../../../src/components/base/Overlay/Overlay.vue';
+import OverlayComponent from '../../../src/components/base/Overlay/Overlay.vue';
 import Card from '../../../src/components/base/Card/Card.vue';
 
 export default {
     title: 'Base/Overlay',
-    component: Overlay
+    component: OverlayComponent
 };
 
 const Template: Story = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { 
-        Overlay,
+        OverlayComponent,
         Button,
         Card
     },
@@ -30,7 +30,7 @@ const Template: Story = (args, { argTypes }) => ({
                 label="Trigger overlay"
                 @click="showOverlay = true"
             />
-            <Overlay 
+            <OverlayComponent 
                 v-if="showOverlay"
                 v-bind="args"
             >
@@ -38,12 +38,12 @@ const Template: Story = (args, { argTypes }) => ({
                     label="Hide overlay" 
                     @click="showOverlay = false"
                 />
-            </Overlay>
+            </OverlayComponent>
         </Card>
     `
 });
 
-export const Demo = Template.bind({});
-Demo.args = {
+export const Overlay = Template.bind({});
+Overlay.args = {
     absolute: false
 };

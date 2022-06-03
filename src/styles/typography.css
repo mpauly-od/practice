@@ -46,7 +46,7 @@ h4, .text-lg {
     font-size: var(--text-lg);
 }
 
-h5, h6, p, .text-md {
+h5, h6, .text-md {
     font-size: var(--text-md);
 }
 
