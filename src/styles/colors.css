@@ -49,6 +49,23 @@
     --color-text-on-primary: var(--color-white); /* Note: not AAA compliant for small, unbolded text */
     --color-text-on-secondary: var(--color-gray-6);
     --color-text-on-surface: var(--color-gray-1);
+
+
+    /* Highlight colors */
+    --color-highlight-RL: #ffccce;
+    --color-highlight-RS: #ff7979;
+    --color-highlight-OL: #fbd7a9;
+    --color-highlight-OS: #ffae5b;
+    --color-highlight-YL: #f2f098;
+    --color-highlight-YS: #fffa67;
+    --color-highlight-GL: #b9f9ca;
+    --color-highlight-GS: #5ef987;
+    --color-highlight-TL: #b4fffb;
+    --color-highlight-TS: #54f9f1;
+    --color-highlight-BL: #a2e3fd;
+    --color-highlight-BS: #51cfff;
+    --color-highlight-VL: #eecffb;
+    --color-highlight-VS: #e29dff;
 }
 
 body {
