@@ -115,6 +115,6 @@ export default defineComponent({
     }
 
     .raised {
-        box-shadow: 0px 1px 6px 0px var(--color-black);
+        box-shadow: var(--box-shadow-raised);
     }
 </style>

@@ -1,3 +1,4 @@
 :root {
     --border-radius: 5px;
+    --box-shadow-raised: 0px 1px 6px 0px var(--color-black);
 }
